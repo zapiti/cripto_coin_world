@@ -1,7 +1,7 @@
 # cripto_coin_world
  My application example made with GETX
 
-# Getx is fast , stable ,extra-light and powerful flutter framework for
+# Getx framework for
 1. State Management
 2. Dependency Injection
 3. Route Management

@@ -1,9 +1,6 @@
-import 'package:crypto_app/page_core/splash_page.dart';
+
 import 'package:crypto_app/page_core/unknown.dart';
 import 'package:crypto_app/router/app_page.dart';
-import 'package:crypto_app/router/constants_router.dart';
-import 'package:crypto_app/src/feature/home/home_binding.dart';
-import 'package:crypto_app/src/feature/home/home_page.dart';
 import 'package:crypto_app/utils/theme/app_theme_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';

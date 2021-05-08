@@ -1,4 +1,4 @@
-# cripto_coin_world
+# Crypto_coin_world
  My application example made with GETX
 
 # Getx framework for

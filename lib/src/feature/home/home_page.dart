@@ -1,4 +1,7 @@
-import 'package:crypto_app/src/feature/home/widget/item_list_cripto.dart';
+import 'package:crypto_app/src/components/select/select_button.dart';
+import 'package:crypto_app/src/feature/home/model/crypto_coin.dart';
+import 'package:crypto_app/src/feature/home/widget/item_list_crypto.dart';
+
 import 'package:crypto_app/utils/theme/app_theme_utils.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -14,7 +17,7 @@ class HomePage extends GetView<HomeController> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "Mundo cripto",
+          "Mundo Crypto",
           style: AppThemeUtils.normalBoldSize(
               color: AppThemeUtils.colorPrimary, fontSize: 20),
         ),
@@ -24,12 +27,33 @@ class HomePage extends GetView<HomeController> {
           initState: (state) {
             controller.getAllData();
           },
-          builder: (_) => controller.listCriptoCoin == null
+          builder: (_) => controller.listCryptoCoin == null
               ? Center(child: CircularProgressIndicator())
-              : ListView.builder(
-                  itemCount: controller.listCriptoCoin.length,
-                  itemBuilder: (context, index) =>
-                      ItemListCripto(controller.listCriptoCoin[index]))),
+              : Column(
+            mainAxisAlignment: MainAxisAlignment.start,crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Container(
+                      child: Text(
+                        "Valor das moedas em:",
+                        style: AppThemeUtils.normalSize(
+                            color: AppThemeUtils.colorPrimary),
+                      ),
+                      margin: EdgeInsets.all(10),
+                    ),
+                    SelectButton(
+                      listItens: CryptoCoin.listCoinConvert,
+                      initialItem: CryptoCoin.listCoinConvert.first,
+                      tapIndex: (selected) =>
+                          controller.currentMoneyValueBase(selected),
+                    ),
+                    Divider(),
+                    Expanded(
+                        child: ListView.builder(
+                            itemCount: controller.listCryptoCoin.length,
+                            itemBuilder: (context, index) => ItemListCrypto(
+                                controller.listCryptoCoin[index])))
+                  ],
+                )),
     );
   }
 }

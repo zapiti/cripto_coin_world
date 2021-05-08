@@ -1,4 +1,0 @@
-#Thu May 06 21:48:27 BRT 2021
-base.0=/Users/nathanranghel/Documents/workspace/Documents/GitHub/NATHAN/crypto_app/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
-path.0=classes.dex
-renamed.0=classes.dex

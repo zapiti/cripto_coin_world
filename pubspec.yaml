@@ -1,5 +1,5 @@
 name: crypto_app
-description: Aplicação de criptomoedas
+description: Aplicação de Cryptomoedas
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `pub publish`. This is preferred for private packages.
@@ -34,6 +34,8 @@ dependencies:
   flutter_masked_text:
   syncfusion_flutter_charts:
   intl:
+  auto_size_text:
+  webview_flutter:
 
 dev_dependencies:
   flutter_test:
@@ -65,7 +67,7 @@ flutter:
   # To add custom fonts to your application, add a fonts section here,
   # in this "flutter" section. Each entry in this list should have a
   # "family" key with the font family name, and a "fonts" key with a
-  # list giving the asset and other descriptors for the font. For
+  # list giving the asset and other desCryptors for the font. For
   # example:
   # fonts:
   #   - family: Schyler

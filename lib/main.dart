@@ -1,4 +1,3 @@
-
 import 'package:crypto_app/page_core/unknown.dart';
 import 'package:crypto_app/router/app_page.dart';
 import 'package:crypto_app/utils/theme/app_theme_utils.dart';
@@ -20,11 +19,13 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       translations: Message(),
       defaultTransition: Transition.zoom,
-      locale: Locale('en', "US"),
+      locale: Locale('en', "US"),debugShowCheckedModeBanner: false,
       theme: ThemeData(
           primaryColor: AppThemeUtils.colorPrimary,
           appBarTheme: AppBarTheme(
-              color: Colors.white,)),
+            color: Colors.white,
+          ),
+          accentColor: AppThemeUtils.colorPrimary),
       fallbackLocale: Locale('en', "US"),
       getPages: AppPage.list,
       unknownRoute: GetPage(page: () => Unknown(), name: 'notFound'),
